@@ -1,0 +1,33 @@
+ 
+# configs
+.jest/**
+.storybook/**
+.vscode/**
+next.config.js
+tsconfig.*
+
+# dependencies
+node_modules/**
+
+# production
+.next/**
+dist/**
+public/**
+
+# testing
+coverage/**
+storyshots/**
+test-reports/**/*
+
+# scripts
+scripts/**
+*.js
+
+# generated files
+logs/**
+src/graphql/schema.json
+src/serviceWorker.ts
+**/generated/**
+
+# types
+**/*.d.ts

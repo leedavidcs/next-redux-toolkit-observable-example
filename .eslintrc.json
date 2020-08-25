@@ -1,0 +1,148 @@
+{
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"standard",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:mdx/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"prettier/@typescript-eslint",
+		"react-app"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"@typescript-eslint/tslint",
+		"import",
+		"prefer-arrow",
+		"prettier",
+		"react",
+		"standard"
+	],
+	"rules": {
+		"@typescript-eslint/array-type": "error",
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/indent": "off",
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": "interface",
+				"format": ["PascalCase"],
+				"prefix": ["I"]
+			}
+		],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-floating-promises": "off",
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/no-misused-promises": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-parameter-properties": "off",
+		"@typescript-eslint/no-this-alias": "off",
+		"@typescript-eslint/no-unnecessary-type-assertion": "off",
+		"@typescript-eslint/no-unsafe-assignment": "off",
+	    "@typescript-eslint/no-unsafe-call": "off",
+	    "@typescript-eslint/no-unsafe-member-access": "off",
+	    "@typescript-eslint/no-unsafe-return": "off",
+		"@typescript-eslint/prefer-for-of": "error",
+		"@typescript-eslint/prefer-function-type": "error",
+		"@typescript-eslint/restrict-template-expressions": "off",
+		"@typescript-eslint/tslint/config": [
+			"warn",
+			{
+				"rules": {
+					"ordered-imports": {
+						"named-imports-order": "case-insensitive"
+					}
+				}
+			}
+		],
+		"@typescript-eslint/unbound-method": "off",
+		"camelcase": "off",
+		"import/no-unresolved": "off",
+		"import/order": [
+			"error",
+			{
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				},
+				"groups": [["external", "builtin", "internal"], "parent", ["sibling", "index"]],
+				"pathGroups": [
+					{
+						"pattern": "@/**",
+						"group": "external",
+						"position": "before"
+					}
+				]
+			}
+		],
+		"jsx-a11y/anchor-is-valid": "off",
+		"max-len": [
+			"warn",
+			{
+				"code": 100,
+				"ignorePattern": "((https?://.+)|(href=)|(import.+\"@/client/page-parts/.+;$))"
+			}
+		],
+		"mdx/no-unused-expressions": "off",
+		"no-bitwise": "error",
+		"no-console": "warn",
+		"no-empty": "warn",
+		"no-magic-numbers": [
+			"error",
+			{
+				"ignore": [-2, -1, 0, 1, 2]
+			}
+		],
+		"no-multi-str": "off",
+		"no-multiple-empty-lines": "error",
+		"no-restricted-imports": [
+			"error",
+			{
+				"patterns": [".."]
+			}
+		],
+		"no-shadow": [
+			"error",
+			{
+				"hoist": "all"
+			}
+		],
+		"object-shorthand": "error",
+		"prefer-arrow/prefer-arrow-functions": "error",
+		"prettier/prettier": "error",
+		"react/prop-types": "off",
+		"react/self-closing-comp": [
+			"error",
+			{
+				"component": true,
+				"html": true
+			}
+		]
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "detect"
+		},
+		"import/resolver": {
+			"alias": {
+				"map": [["@", "./src"]],
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	}
+}
