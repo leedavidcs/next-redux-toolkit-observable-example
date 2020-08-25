@@ -3,7 +3,6 @@ import epics from "./epics";
 import { epicMiddleware, middleware } from "./middleware";
 import { IReducerState, reducer } from "./reducers";
 
-export { ActionTypes } from "./action-types";
 export { actions } from "./actions";
 export type { IReducerState } from "./reducers";
 

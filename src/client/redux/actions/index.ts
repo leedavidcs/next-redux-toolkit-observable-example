@@ -1,3 +1,6 @@
-import * as Ping from "./ping.action";
+import { countSlice, pingSlice } from "@/client/redux/slices";
 
-export const actions = { Ping };
+export const actions = {
+	Count: countSlice.actions,
+	Ping: pingSlice.actions
+};

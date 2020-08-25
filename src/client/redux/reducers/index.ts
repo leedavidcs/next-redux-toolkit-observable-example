@@ -1,10 +1,12 @@
+import { countSlice, pingSlice, SliceState } from "@/client/redux/slices";
 import { ReducersMapObject } from "redux";
-import { IPingReducer, pingReducer } from "./ping.reducer";
 
 export interface IReducerState {
-	ping: IPingReducer;
+	count: SliceState<typeof countSlice>;
+	ping: SliceState<typeof pingSlice>;
 }
 
 export const reducer: ReducersMapObject<IReducerState> = {
-	ping: pingReducer
+	count: countSlice.reducer,
+	ping: pingSlice.reducer
 };
